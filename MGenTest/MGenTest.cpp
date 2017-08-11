@@ -121,8 +121,8 @@ void PublishTest(CString tname, int result, int tpassed) {
 		st.Format("UpdateTest \"%s\" -Framework MSTest -FileName MGen.exe -Duration %d -Outcome %s -ErrorMessage \"%d: %s\" >> autotest\\run.log 2>&1", tname, tpassed, cat, result, emes);
 		Run("appveyor", st, 1000);
 		// Send errors separately in case of command line overflow
-		st.Format("UpdateTest \"%s\" -Framework MSTest -FileName MGen.exe -Duration %d -Outcome %s -ErrorMessage \"%d: %s\" -ErrorStackTrace \"%s\" >> autotest\\run.log 2>&1", tname, tpassed, cat, result, emes, errors);
-		Run("appveyor", st, 1000);
+		//st.Format("UpdateTest \"%s\" -Framework MSTest -FileName MGen.exe -Duration %d -Outcome %s -ErrorMessage \"%d: %s\" -ErrorStackTrace \"%s\" >> autotest\\run.log 2>&1", tname, tpassed, cat, result, emes, errors);
+		//Run("appveyor", st, 1000);
 	}
 }
 
